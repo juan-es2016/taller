@@ -151,13 +151,13 @@ total = monitor.getPersonasSistema();
              
              JPanel  panel =new JPanel();
             panel.setBounds(0,0,300,300);
-            double[]d =new double[4];
+            double[]d =new double[5];
              d[0]=monitor.Qfiscal;
              d[1]=monitor.Dfiscal;
              d[2]=monitor.Dpolicial;
              d[3]=monitor.flagrante;
              //d[4]=admin.Premium;
-             String[] l=new String[4];
+             String[] l=new String[5];
              l[0]="QuerellaFisacal";
              l[1]="DenunciaFiscal";
              l[2]="DenunciaPolicia";
@@ -175,13 +175,13 @@ total = monitor.getPersonasSistema();
              
              JPanel panel2=new JPanel();
              panel2.setBounds(305, 0, 300, 300);
-            double[]d2 =new double[3];
+            double[]d2 =new double[5];
              d2[0]=monitor.rechaso;
              d2[1]=monitor.salida;
              d2[2]=monitor.imputacion;
             // d2[3]=2;
              //d2[4]=6;
-             String[] l2=new String[3];
+             String[] l2=new String[5];
              l2[0]="casos rechazados";
              l2[1]="casos que tomaron salida alternativa";
              l2[2]="casos imputados";
@@ -195,20 +195,20 @@ total = monitor.getPersonasSistema();
             
             JPanel panel3=new JPanel();
              panel3.setBounds(610, 0, 300, 300);
-            double[]d3 =new double[5];
+            double[]d3 =new double[2];
              d3[0]=monitor.total-monitor.rechaso-monitor.salida;
              d3[1]=monitor.total;
-             d3[2]=6;
-             d3[3]=3;
-             d3[4]=2;
-             String[] l3=new String[5];
-             l3[0]="1 DIA";
-             l3[1]="2 DIAS";
-             l3[2]="3 DIAS";
-             l3[3]="4 DIAS";
-             l3[4]="5 DIAS";
+             //d3[2]=6;
+             //d3[3]=3;
+             //d3[4]=2;
+             String[] l3=new String[2];
+             l3[0]="CASOS QUE FUERON IMPUTADOS";
+             l3[1]="TOTAL CASOS REGISTRADOS";
+             //l3[2]="3 DIAS";
+            // l3[3]="4 DIAS";
+             //l3[4]="5 DIAS";
              
-            GraficoTorta grafico3=new GraficoTorta(400, 300, d3, l3 , "DIAS DE HOSPEDAJE");
+            GraficoTorta grafico3=new GraficoTorta(400, 300, d3, l3 , "TOTAL CASOS");
             panel3.add(grafico3.getContentPane());
             tablaGraficos.add(panel3);
             
@@ -244,9 +244,9 @@ total = monitor.getPersonasSistema();
              JLabel reporteEjecutiva =new JLabel("delito fragante:"+" "+(int)d[3]);
              reporteEjecutiva.setBounds(10, 420, 300, 20);
              panelGraficos.add(reporteEjecutiva);
-             //JLabel reportePremium =new JLabel("delito fragante:"+" "+(int)d[4]);
-             //reportePremium.setBounds(10, 440, 300, 20);
-             //panelGraficos.add(reportePremium);
+             JLabel reportePremium =new JLabel("delito fragante:"+" "+(int)d[4]);
+             reportePremium.setBounds(10, 440, 300, 20);
+             panelGraficos.add(reportePremium);
              
              JLabel reporteEmail =new JLabel("RESERV. E-MAIL:"+" "+(int)d2[2]);
              reporteEmail.setBounds(330, 350, 300, 20);
@@ -264,12 +264,12 @@ total = monitor.getPersonasSistema();
              reporteNinguno.setBounds(330, 430, 300, 20);
              panelGraficos.add(reporteNinguno);
              
-            JLabel reporte1dia =new JLabel("1 DIA:"+" "+(int)d3[0]);
+            JLabel reporte1dia =new JLabel(" IMPUTADOS"+" "+(int)d3[0]);
              reporte1dia.setBounds(650, 350, 300, 20);
              panelGraficos.add(reporte1dia);
-             JLabel reporte2dias =new JLabel("2 DIAS:"+" "+(int)d3[1]);
+             JLabel reporte2dias =new JLabel(" REGISTRADOS"+" "+(int)d3[1]);
              reporte2dias.setBounds(650, 370, 300, 20);
-             panelGraficos.add(reporte2dias);
+             /*panelGraficos.add(reporte2dias);
              JLabel reporte3dias =new JLabel("3 DIAS:"+" "+(int)d3[2]);
              reporte3dias.setBounds(650, 390, 300, 20);
              panelGraficos.add(reporte3dias);
@@ -278,7 +278,7 @@ total = monitor.getPersonasSistema();
              panelGraficos.add(reporte4dias);
              JLabel reporte5dias =new JLabel("5 DIAS:"+" "+(int)d3[4]);
              reporte5dias.setBounds(650, 430, 300, 20);
-             panelGraficos.add(reporte5dias);
+             panelGraficos.add(reporte5dias);*/
              
 	}
 }

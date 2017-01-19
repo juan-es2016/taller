@@ -141,7 +141,7 @@ public class Cliente extends Thread implements Runnable{
                System.out.println(i);
 		switch (i){
             case 1: {	imagen.setLocation(60,100);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
                                 monitor.incrementarQfiscal();
             			dormir((int)tiempoContactoLlamada);  /////////////////TIEMPO DE UNA LLAMADA
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
@@ -150,7 +150,7 @@ public class Cliente extends Thread implements Runnable{
         	}
             break;
             case 2: {	imagen.setLocation(60,250);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
                                 monitor.incrementarDfiscal();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
@@ -161,7 +161,7 @@ public class Cliente extends Thread implements Runnable{
     		}
             break;
             case 3: {	imagen.setLocation(60,400);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
                                 monitor.incrementarDpolicial();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
@@ -172,7 +172,7 @@ public class Cliente extends Thread implements Runnable{
 			}
             break;
             case 4: {	imagen.setLocation(60,550);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
                                 monitor.incrementarFlagrante();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
@@ -182,21 +182,21 @@ public class Cliente extends Thread implements Runnable{
 			}
             break;
             case 5: {	imagen.setLocation(60,170);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
             			moverN(135);
 			}
             break;
             case 6: {	imagen.setLocation(120,170);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
             			moverN(135);
             }
             break;
             case 7: {	imagen.setLocation(180,170);
-            			monitor.incrementarPersonasSistema();
+            			monitor.incrementarTotal();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
             			moverN(135);

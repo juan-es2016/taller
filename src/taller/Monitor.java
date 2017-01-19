@@ -138,7 +138,7 @@ public class Monitor
     public static synchronized void incrementarTaller(){
     	clientesTaller ++;
     }
-    public  static synchronized void incrementarPersonasSistema(){
+    public  static synchronized void incrementarTotal(){
         personasSistema ++;
     }
     public  static synchronized void casosFinalisados(){
