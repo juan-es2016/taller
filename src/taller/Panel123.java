@@ -122,7 +122,7 @@ public class Panel123 extends JPanel {
     public void crearFondo(){
 		//fondo.setIcon(new ImageIcon(escala));
                  //Dimension tamanio= getSize();
-     ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/images/fondosimulacion.jpg"));
+     ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/images/fondosimu.png"));
        // g.drawImage(imagenFondo.getImage(),0,0,tamanio.width,tamanio.height,null);
      //setOpaque(false);
       //super.paintComponent(g);
