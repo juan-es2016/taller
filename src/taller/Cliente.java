@@ -143,36 +143,41 @@ public class Cliente extends Thread implements Runnable{
             case 1: {	imagen.setLocation(60,100);
             			monitor.incrementarPersonasSistema();
                                 monitor.incrementarQfiscal();
-            			dormir((int)tiempoContactoLlamada);  ////////////////////////////////////////TIEMPO DE UNA LLAMADA
+            			dormir((int)tiempoContactoLlamada);  /////////////////TIEMPO DE UNA LLAMADA
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverS(130);
+            			moverD(271);
+                                moverS(320);
         	}
             break;
-            case 2: {	imagen.setLocation(120,70);
+            case 2: {	imagen.setLocation(60,250);
             			monitor.incrementarPersonasSistema();
                                 monitor.incrementarDfiscal();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverS(130);
+            			moverD(271);
+                                moverS(320);
+                                
                               
     		}
             break;
-            case 3: {	imagen.setLocation(180,70);
+            case 3: {	imagen.setLocation(60,400);
             			monitor.incrementarPersonasSistema();
                                 monitor.incrementarDpolicial();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverS(130);
+            			moverD(271);
+                                //dormir(125);
+                                moverN(320);
                                   //aux=1;
 			}
             break;
-            case 4: {	imagen.setLocation(240,70);
+            case 4: {	imagen.setLocation(60,550);
             			monitor.incrementarPersonasSistema();
                                 monitor.incrementarFlagrante();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverS(130);
-                                aux=1;
+            			//moverS(130);
+                                //aux=1;
 			}
             break;
             case 5: {	imagen.setLocation(60,170);
@@ -199,33 +204,33 @@ public class Cliente extends Thread implements Runnable{
             default: 
             break;
         }
-	 moverD(271);
+	 //moverD(271);
 	 //int k= va.bernoulli(0.9); //////////////////////////////PROB UNIFORME
          //aux=llamadas-1;
 	if(aux==1){	/////////////////////////////RECHAZADADOS EN LLAMADAS
-            	imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
+            	//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
             	monitor.incrementarRechazadasLlamadas();
-            	moverS(200);
+            	//moverS(200);
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaI.gif")));
-            	moverI(80);
+            	//moverI(80);
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-            	moverS(292);
+            	//moverS(292);
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
             	moverD(620);
                 dormir(125);
                 monitor.incrementarLlamadas();
                 dormir(125);
-                moverS(390);
+                moverN(100);
             			monitor.incrementarEstimacion();
             			gastos(1);
                 
             	//imagen.setIcon(new ImageIcon("Imagenes/bola.png"));
             }else
               {			
-            	moverN(100);
+            	moverD(450);
             	dormir(100);  /////////////////////////ESPERA EN LA PUERTA DE SINIESTROS
             	
-        		imagen.setLocation(690,5);
+        		//imagen.setLocation(690,5);
         		monitor.incrementarLlamadas();
         		dormir(125); /////////////////////colaaaaaaaaa
         		siniestros();
@@ -240,15 +245,15 @@ public class Cliente extends Thread implements Runnable{
 		System.out.println(va.uniforme(1, (siniestros-1)));
 		int i= va.uniforme(1, (siniestros-1)); ///////////////////PROB UNIFORME
 		switch (i){
-            case 1: {	imagen.setLocation(340,40);
+            case 1: {	imagen.setLocation(500,330);
             			dormir(tiempoVerificacionSiniestros); ////////////REVISION EN SINIESTROS
             			monitor.insertarTiempoSiniestros((double)tiempoVerificacionSiniestros);
-            			imagen.setLocation(310,50);
-            			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
+            			imagen.setLocation(500,330);
+            			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
             			monitor.incrementarSiniestros();
-            			moverS(105);
-        				imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-        				moverD(580);
+            			moverD(550);
+        			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+        			//moverD(580);
         	}
             break;
             case 2: {	imagen.setLocation(400,40);
@@ -353,7 +358,7 @@ public class Cliente extends Thread implements Runnable{
 		}
 		//monitor.incrementarSiniestros();
 		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-		moverS(290);
+		//moverS(290);
 		
 		gastos_investigacion();
 	}
@@ -362,7 +367,7 @@ public class Cliente extends Thread implements Runnable{
 		//int i= va.bernoulli(0.3); //0.3///////////////////////PROB BERMOULLIIIIIII
 		switch (0){
             case 0: {	////AL DEPTO DE GASTOS
-            			moverS(390);
+            			//moverS(390);
             			monitor.incrementarEstimacion();
             			gastos(0);
             }
@@ -381,42 +386,42 @@ public class Cliente extends Thread implements Runnable{
              int aux=0;
             if(identificador==1){
               	imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaI.gif")));
-			    		moverI(280);
-			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-			    		moverS(589);
-			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-			    		moverD(378);
-                                        monitor.incrementarImputacion();
-                                        aux=0;
+	        moverI(280);
+		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
+		moverS(589);
+		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+		moverD(378);
+                monitor.incrementarImputacion();
+                aux=0;
             }else{
 	    ///////////////////////////PROB UNIFORME
 	     switch (i){
-            case 1: {	imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-		        		moverD(678);
-		        		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-		        		moverS(589);
-		        		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-		        		moverD(778);
+            case 1: {	//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+		        		//moverD(678);
+		        		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
+		        		//moverN(589);
+		        		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaN.gif")));
+		        		moverN(75);
                                         monitor.incrementarRechaso();
                                         aux=1;
             }
             break;
-            case 2: {	imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaI.gif")));
-			    		moverI(480);
-			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-			    		moverS(589);
-			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-			    		moverD(578);
+            case 2: {	//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaI.gif")));
+			    		//moverI(480);
+			    		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
+			    		//moverS(589);
+			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaN.gif")));
+			    		moverN(225);
                                         monitor.incrementarSalidas();
                                         aux=0;
             }
             break;
-	        case 3: {	imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaI.gif")));
-			    		moverI(280);
+	        case 3: {	//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaI.gif")));
+			    		//moverI(280);
 			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-			    		moverS(589);
-			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-			    		moverD(378);
+			    		moverS(375);
+			    		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+			    		//moverD(525);
                                         monitor.incrementarImputacion();
                                         aux=0;
                                         
