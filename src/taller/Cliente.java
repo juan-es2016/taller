@@ -145,8 +145,8 @@ public class Cliente extends Thread implements Runnable{
                                 monitor.incrementarQfiscal();
             			dormir((int)tiempoContactoLlamada);  /////////////////TIEMPO DE UNA LLAMADA
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverD(271);
-                                moverS(320);
+            			moverD(290);
+                                moverS(250);
         	}
             break;
             case 2: {	imagen.setLocation(110,230);
@@ -154,8 +154,8 @@ public class Cliente extends Thread implements Runnable{
                                 monitor.incrementarDfiscal();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverD(271);
-                                moverS(320);
+            			moverD(290);
+                                moverS(250);
                                 
                               
     		}
@@ -165,9 +165,9 @@ public class Cliente extends Thread implements Runnable{
                                 monitor.incrementarDpolicial();
             			dormir((int)tiempoContactoLlamada);
             			monitor.insertarTiempoLlamanda(tiempoContactoLlamada);
-            			moverD(271);
+            			moverD(290);
                                 //dormir(125);
-                                moverN(320);
+                                moverN(250);
                                   //aux=1;
 			}
             break;
@@ -392,9 +392,9 @@ public class Cliente extends Thread implements Runnable{
 		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
 		//moverS(589);
 		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-		moverD(600);
+		moverD(550);
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-		moverS(150);
+		moverS(75);
                 monitor.incrementarImputacion();
                 aux=0;
             }else{
