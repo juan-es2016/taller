@@ -37,6 +37,9 @@ public class simulacion extends javax.swing.JFrame {
      this.pack();
      this.setExtendedState(MAXIMIZED_BOTH);
      ATRAS.setVisible(false);
+        jComboBox1.setVisible(false);
+        jComboBox2.setVisible(false);
+        jComboBox3.setVisible(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
