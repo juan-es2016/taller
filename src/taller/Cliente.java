@@ -140,7 +140,7 @@ public class Cliente extends Thread implements Runnable{
                int aux=0;
                System.out.println(i);
 		switch (i){
-            case 1: {	imagen.setLocation(60,100);
+            case 1: {	imagen.setLocation(110,80);
             			monitor.incrementarTotal();
                                 monitor.incrementarQfiscal();
             			dormir((int)tiempoContactoLlamada);  /////////////////TIEMPO DE UNA LLAMADA
@@ -149,7 +149,7 @@ public class Cliente extends Thread implements Runnable{
                                 moverS(320);
         	}
             break;
-            case 2: {	imagen.setLocation(60,250);
+            case 2: {	imagen.setLocation(110,230);
             			monitor.incrementarTotal();
                                 monitor.incrementarDfiscal();
             			dormir((int)tiempoContactoLlamada);
@@ -160,7 +160,7 @@ public class Cliente extends Thread implements Runnable{
                               
     		}
             break;
-            case 3: {	imagen.setLocation(60,400);
+            case 3: {	imagen.setLocation(110,380);
             			monitor.incrementarTotal();
                                 monitor.incrementarDpolicial();
             			dormir((int)tiempoContactoLlamada);
@@ -171,7 +171,7 @@ public class Cliente extends Thread implements Runnable{
                                   //aux=1;
 			}
             break;
-            case 4: {	imagen.setLocation(60,550);
+            case 4: {	imagen.setLocation(110,530);
             			monitor.incrementarTotal();
                                 monitor.incrementarFlagrante();
             			dormir((int)tiempoContactoLlamada);
@@ -217,7 +217,7 @@ public class Cliente extends Thread implements Runnable{
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
             	//moverS(292);
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-            	moverD(450);
+            	moverD(350);
                 //dormir(125);
                 monitor.incrementarLlamadas();
                 //dormir(125);

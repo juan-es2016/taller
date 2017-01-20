@@ -216,8 +216,8 @@ public class Panel123 extends JPanel {
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     public void llamadas(){
-    	int x=75;
-    	int y=75;
+    	int x=120;
+    	int y=50;
     	for(int i=0;i<llamadas;i++){	
     		JLabel llamadas1=new JLabel(new ImageIcon(getClass().getResource("/images/oficina.gif")));
                 //ImageIcon imagenNota = new ImageIcon(getClass().getResource("/images/oficina.png"));
@@ -227,17 +227,17 @@ public class Panel123 extends JPanel {
     		//x=x;  
     		operadoresllamadas.add(llamadas1);
     		if(i==1){
-    			y=225;
+    			y=200;
     			//x=45;
     		}else if(i==2){
-                y=375;}
-                else y=525;
+                y=350;}
+                else y=500;
     	}	
 	}
     
     public void siniestros(){
-    	int x=500;
-	    int y=330;
+    	int x=450;
+	    int y=300;
 	    for(int i=0;i<siniestros;i++){	
 	    	//JLabel siniestros1=new JLabel(new ImageIcon("/images/agente0.png"));
                 JLabel siniestros1=new JLabel(new ImageIcon(getClass().getResource("/images/agente0.png")));
@@ -256,7 +256,7 @@ public class Panel123 extends JPanel {
     
     public void gastos(){
     	int x=768;
-	      int y=75;
+	      int y=65;
 	    for(int i=1;i<=gastos;i++){	
 	    	JLabel estimaciones=new JLabel(new ImageIcon(getClass().getResource("/images/estimacion.gif")));
 	    	estimaciones.setLayout(null);
@@ -270,10 +270,10 @@ public class Panel123 extends JPanel {
 	    		// x=830;
 	    	 //}
                  if(i==1){
-    			y=225;
+    			y=320;
     			//x=45;
     		}else if(i==2){
-                y=375;}
+                y=475;}
                 else y=525;
 	    }	
     }

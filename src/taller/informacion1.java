@@ -26,7 +26,7 @@ public class informacion1 extends javax.swing.JPanel {
     }
     public void paintComponent(Graphics g){
      Dimension tamanio= getSize();
-     ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/images/informacion1.jpg"));
+     ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/images/descripcion.jpg"));
         g.drawImage(imagenFondo.getImage(),0,0,tamanio.width,tamanio.height,null);
         
      setOpaque(false);
