@@ -29,17 +29,17 @@ public class Tablas extends JFrame{
 	int diasMes=26;
 	int atendidos=(monitor.personasSistema);
 	
-	int aceptadosllamadas=(monitor.Qfiscal);
-	int rechazadosllamadas=(monitor.Dfiscal);
-	int siniestros=(monitor.Dpolicial);
-	int sospechosos=(monitor.flagrante);
-	int fraude=(monitor.rechaso);
-        int estimacion=(monitor.salida);
-	int negociacion=(monitor.imputacion);
+	int Qfiscal=(monitor.Qfiscal);
+	int Dfiscal=(monitor.Dfiscal);
+	int Dpolicia=(monitor.Dpolicial);
+	int flagrante=(monitor.flagrante);
+	int rechaso=(monitor.rechaso);
+        int salida=(monitor.salida);
+	int imputacion=(monitor.imputacion);
 	//int taller=(monitor.imputacion);
 	
-	int total=aceptadosllamadas+rechazadosllamadas+siniestros+sospechosos;
-	int rechazados=total-fraude-estimacion;
+	int total=Qfiscal+Dfiscal+Dpolicia+flagrante;
+	int rechazados=total-rechaso-salida;
 	int aceptados=total;
 	
 	int mesSimulacion;
@@ -103,13 +103,13 @@ public class Tablas extends JFrame{
     	String[]   cabe ={" Descripcion ", " Resultado "};
 			String[][] datos = {
 							{"MES de la Simulacion ","  "+mesSelec},
-							{"querellas ante en fiscal  ","  "+Integer.toString(aceptadosllamadas)+" personas"},
-							{"denuncias nate el fiscal ","  "+Integer.toString(rechazadosllamadas)+" personas"},
-							{"denuncia ante la policia ","  "+Integer.toString(siniestros)+" personas"},
-							{"delitos fragantes ","  "+Integer.toString(sospechosos)+" personas"},
-							{"casos que fueron rechazados","  "+Integer.toString(fraude)+" personas"},
-							{"casos que tomaron salidas alternativas"," "+Integer.toString(estimacion)+" personas"},
-							{"casos que fueron imputados formalmente","  "+Integer.toString(negociacion)+" personas"},
+							{"querellas ante en fiscal  ","  "+Integer.toString(Qfiscal)+" personas"},
+							{"denuncias nate el fiscal ","  "+Integer.toString(Dfiscal)+" personas"},
+							{"denuncia ante la policia ","  "+Integer.toString(Dpolicia)+" personas"},
+							{"delitos fragantes ","  "+Integer.toString(flagrante)+" personas"},
+							{"casos que fueron rechazados","  "+Integer.toString(rechaso)+" personas"},
+							{"casos que tomaron salidas alternativas"," "+Integer.toString(salida)+" personas"},
+							{"casos que fueron imputados formalmente","  "+Integer.toString(imputacion)+" personas"},
 							//{"Clientes que Atendidos a Taller","  "+Integer.toString(taller)+" personas"},
 							{" "," "},
 							{"TOTAL CASOS CON SENTENCIA","  "+Integer.toString(rechazados)+" personas"},

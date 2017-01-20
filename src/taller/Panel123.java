@@ -38,16 +38,16 @@ public class Panel123 extends JPanel {
     private JComboBox dias;
     
     
-    private JComboBox cb_d_llamadas;
-    private JComboBox cb_d_siniestros;
-    private JComboBox cb_d_estimacion;
-    private JComboBox cb_d_investigacion;
-    private JComboBox cb_d_negociacion;
+    private JComboBox cb_d_denuncias;
+    private JComboBox cb_d_fiscales;
+    private JComboBox cb_d_decicionFiscal;
+    private JComboBox cb_d_jueces;
+    private JComboBox cb_d_alternativas;
     ///
     private JLabel fondo;
-    private ArrayList<JLabel> operadoresllamadas;
-    private ArrayList<JLabel> listaSiniestros;
-    private ArrayList<JLabel> listaGastos;
+    private ArrayList<JLabel> recepcionistas;
+    private ArrayList<JLabel> fiscales;
+    private ArrayList<JLabel> jueces;
     private JLabel investigacion;
     private JLabel fraudes;
     private JLabel negociacion;
@@ -91,9 +91,9 @@ public class Panel123 extends JPanel {
 	    tiempoEntreLlegadas=10;
 	    cantidadC=0;
 		
-		operadoresllamadas=new ArrayList<JLabel>();
-		listaSiniestros=new ArrayList<JLabel>();
-		listaGastos = new ArrayList<JLabel>();
+		recepcionistas=new ArrayList<JLabel>();
+		fiscales=new ArrayList<JLabel>();
+		jueces = new ArrayList<JLabel>();
 		
 		
 	    /////////////////////////////////////////////////////labelss
@@ -170,45 +170,45 @@ public class Panel123 extends JPanel {
 		dias.setBounds(110, 20, 80, 20);
 		//add(dias);
 		
-		cb_d_llamadas = new JComboBox();
-		cb_d_llamadas.addItem("Exponencial");
-		cb_d_llamadas.addItem("Uniforme");
-		cb_d_llamadas.addItem("Normal");
-		cb_d_llamadas.addItem("Trans. Inversa");
-		cb_d_llamadas.setBounds(200, 60, 80, 20);
+		cb_d_denuncias = new JComboBox();
+		cb_d_denuncias.addItem("Exponencial");
+		cb_d_denuncias.addItem("Uniforme");
+		cb_d_denuncias.addItem("Normal");
+		cb_d_denuncias.addItem("Trans. Inversa");
+		cb_d_denuncias.setBounds(200, 60, 80, 20);
 		//add(cb_d_llamadas);
 
-		cb_d_siniestros = new JComboBox();
-		cb_d_siniestros.addItem("Trans. Inversa");
-		cb_d_siniestros.addItem("Normal");
-		cb_d_siniestros.addItem("Exponencial");
-		cb_d_siniestros.addItem("Uniforme");
-		cb_d_siniestros.setBounds(470, 28, 80, 20);
+		cb_d_fiscales = new JComboBox();
+		cb_d_fiscales.addItem("Trans. Inversa");
+		cb_d_fiscales.addItem("Normal");
+		cb_d_fiscales.addItem("Exponencial");
+		cb_d_fiscales.addItem("Uniforme");
+		cb_d_fiscales.setBounds(470, 28, 80, 20);
 		//add(cb_d_siniestros);
 
-		cb_d_negociacion = new JComboBox();
-		cb_d_negociacion.addItem("Trans. Inversa");
-		cb_d_negociacion.addItem("Normal");
-		cb_d_negociacion.addItem("Exponencial");
-		cb_d_negociacion.addItem("Uniforme");
-		cb_d_negociacion.setBounds(780, 45, 80, 20);
+		cb_d_alternativas = new JComboBox();
+		cb_d_alternativas.addItem("Trans. Inversa");
+		cb_d_alternativas.addItem("Normal");
+		cb_d_alternativas.addItem("Exponencial");
+		cb_d_alternativas.addItem("Uniforme");
+		cb_d_alternativas.setBounds(780, 45, 80, 20);
 		//add(cb_d_negociacion);
 
-		cb_d_investigacion = new JComboBox();
-		cb_d_investigacion.addItem("Normal");
-		cb_d_investigacion.addItem("Exponencial");
-		cb_d_investigacion.addItem("Uniforme");
-		cb_d_investigacion.addItem("Trans. Inversa");
-		cb_d_investigacion.setBounds(30, 540, 80, 20);
+		cb_d_jueces = new JComboBox();
+		cb_d_jueces.addItem("Normal");
+		cb_d_jueces.addItem("Exponencial");
+		cb_d_jueces.addItem("Uniforme");
+		cb_d_jueces.addItem("Trans. Inversa");
+		cb_d_jueces.setBounds(30, 540, 80, 20);
 		//add(cb_d_investigacion);
 		
-		cb_d_estimacion = new JComboBox();
-		cb_d_estimacion.addItem("Uniforme");
-		cb_d_estimacion.addItem("Normal");
-		cb_d_estimacion.addItem("Exponencial");
-		cb_d_estimacion.addItem("Uniforme");
-		cb_d_estimacion.addItem("Trans. Inversa");
-		cb_d_estimacion.setBounds(247, 630, 80, 20);
+		cb_d_decicionFiscal = new JComboBox();
+		cb_d_decicionFiscal.addItem("Uniforme");
+		cb_d_decicionFiscal.addItem("Normal");
+		cb_d_decicionFiscal.addItem("Exponencial");
+		cb_d_decicionFiscal.addItem("Uniforme");
+		cb_d_decicionFiscal.addItem("Trans. Inversa");
+		cb_d_decicionFiscal.setBounds(247, 630, 80, 20);
 		//add(cb_d_estimacion);
 		
     
@@ -225,7 +225,7 @@ public class Panel123 extends JPanel {
     		llamadas1.setBounds(x,y,50,56);
     		this.add(llamadas1);
     		//x=x;  
-    		operadoresllamadas.add(llamadas1);
+    		recepcionistas.add(llamadas1);
     		if(i==1){
     			y=200;
     			//x=45;
@@ -246,7 +246,7 @@ public class Panel123 extends JPanel {
 	         siniestros1.setBounds(x,y,50,56);
 	         this.add(siniestros1);
 	         x=x+50+10;  
-	         operadoresllamadas.add(siniestros1);
+	         recepcionistas.add(siniestros1);
 	    	 if(i%5==0 && i!=0){
 	    		 y=y+130;
 	    		 x=325;
@@ -264,7 +264,7 @@ public class Panel123 extends JPanel {
 	         estimaciones.setBounds(x,y,50,56);
 	         this.add(estimaciones);
 	         //x=x-200;  
-	         operadoresllamadas.add(estimaciones);
+	         recepcionistas.add(estimaciones);
 	    	 //if(i%3==0){
 	    		// y=y-70;
 	    		// x=830;
@@ -279,35 +279,13 @@ public class Panel123 extends JPanel {
     }
     
     public void fijos(){
-    	//investigacion=new JLabel(new ImageIcon(getClass().getResource("/images/sospechas1.gif")));//sospechas1
-    	//investigacion.setLayout(null);
-    	//investigacion.setBounds(60,569,120,60);
-    	//add(investigacion);
-		
-		//fraudes=new JLabel(new ImageIcon(getClass().getResource("/images/fraudes.gif")));
-		//fraudes.setLayout(null);
-		//fraudes.setBounds(37,440,50,78);
-		//add(fraudes);
 		
 		negociacion=new JLabel(new ImageIcon(getClass().getResource("/images/negocio0.gif")));//negocio1.gif
 		negociacion.setLayout(null);
 		negociacion.setBounds(1200,80,100,90);
 		add(negociacion);
 		
-		//taller1=new JLabel(new ImageIcon(getClass().getResource("/images/auto2.gif")));
-    	//taller1.setLayout(null);
-    	//taller1.setBounds(1105,365,132,65);
-		//add(taller1);
-		
-		//taller2=new JLabel(new ImageIcon(getClass().getResource("/images/auto2.gif")));
-    	//taller2.setLayout(null);
-    	//taller2.setBounds(1105,470,132,65);
-		//add(taller2);
-		
-		//taller3=new JLabel(new ImageIcon(getClass().getResource("/images/auto2.gif")));
-    	//taller3.setLayout(null);
-    	//taller3.setBounds(1105,575,132,65);
-		//add(taller3);
+	
     }
     
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -368,18 +346,18 @@ public class Panel123 extends JPanel {
     public void empezarSimulacion(){
     	int messelecionado = cb_meses.getSelectedIndex();
     	
-    	Monitor.atencionLlamadas(cb_d_llamadas.getSelectedIndex());//exponencial,uniforme...
-    	Monitor.atencionSiniestros(cb_d_siniestros.getSelectedIndex());
-    	Monitor.atencionInvestigacion(cb_d_investigacion.getSelectedIndex());
-    	Monitor.atencionEstimacion(cb_d_estimacion.getSelectedIndex());
-    	Monitor.atencionNegociacion(cb_d_negociacion.getSelectedIndex());
+    	Monitor.atencionLlamadas(cb_d_denuncias.getSelectedIndex());//exponencial,uniforme...
+    	Monitor.atencionSiniestros(cb_d_fiscales.getSelectedIndex());
+    	Monitor.atencionInvestigacion(cb_d_jueces.getSelectedIndex());
+    	Monitor.atencionEstimacion(cb_d_decicionFiscal.getSelectedIndex());
+    	Monitor.atencionNegociacion(cb_d_alternativas.getSelectedIndex());
     	
 
-    	cb_d_llamadas.setEnabled(false);
-    	cb_d_siniestros.setEnabled(false);
-    	cb_d_investigacion.setEnabled(false);
-    	cb_d_negociacion.setEnabled(false);
-    	cb_d_estimacion.setEnabled(false);
+    	cb_d_denuncias.setEnabled(false);
+    	cb_d_fiscales.setEnabled(false);
+    	cb_d_jueces.setEnabled(false);
+    	cb_d_alternativas.setEnabled(false);
+    	cb_d_decicionFiscal.setEnabled(false);
     	
     	cb_meses.setEnabled(false);
     	dias.setEnabled(false);

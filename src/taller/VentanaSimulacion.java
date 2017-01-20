@@ -65,15 +65,6 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
     
     private DefaultTableModel modelo;
 
-    /*
-    public static JLabel label_llamadas = new JLabel     ("Dpto Llamadas      : 0");
-    public static JLabel label_rechazados = new JLabel   ("Rechazados         : 0");
-    public static JLabel label_siniestros = new JLabel   ("Dpto Siniestros    : 0");
-    public static JLabel label_investigacion = new JLabel("Dpto Investigacion : 0");    
-    public static JLabel label_gastos = new JLabel       ("Dpto Estimacion    : 0");
-    public static JLabel label_negociacion = new JLabel  ("En Negociacion     : 0"); 
-    public static JLabel label_taller = new JLabel       ("En taller          : 0"); 
-     */   
     public static JLabel label_sistema = new JLabel("total.Denun : 0");
     //public static JLabel label_atendidas = new JLabel("casos Correctos : 0");
 
@@ -241,21 +232,6 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
       panel1.add(p_infoGeneral);
       panel1.add(p_cronometro);
 
-      /*
-      label_llamadas.setBounds(10, 25, 230, 20);
-      label_rechazados.setBounds(10, 50, 230, 20);
-      label_siniestros.setBounds(10, 75, 230, 20);
-      label_investigacion.setBounds(10, 100, 230, 20);
-      label_negociacion.setBounds(10, 125, 230, 20);
-      label_taller.setBounds(10, 150, 140, 20);
-      
-      p_infoAtencion.add(label_llamadas);
-      p_infoAtencion.add(label_rechazados);
-      p_infoAtencion.add(label_siniestros);
-      p_infoAtencion.add(label_investigacion);
-      p_infoAtencion.add(label_negociacion);
-      p_infoAtencion.add(label_taller);
-      */
       label_sistema.setBounds(10, 20, 230, 20);
       p_infoGeneral.add(label_sistema); 
      // label_atendidas.setBounds(10, 40, 230, 20);
@@ -303,15 +279,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
     }
        
     public static void actualizarInformacion(){
-        /*	
-    	label_llamadas.setText	   ("Dpto Llamadas      : "+monitor.clientesEnLlamadas);
-            label_rechazados.setText   ("Rechazados         : "+monitor.rechazadasEnLlamadas );
-            label_siniestros.setText   ("Dpto Siniestros    : "+monitor.clientesSiniestros);
-            label_investigacion.setText("Dpto Investigacion : "+monitor.clientesInvestigacion);    
-            label_gastos.setText       ("Dpto Estimacion    : "+monitor.clientesGastos);
-            label_negociacion.setText  ("En Negociacion     : "+monitor.clientesNegociacion);
-            label_taller.setText       ("En Taller          : "+monitor.clientesTaller);
-            */
+
             tiempo.setText(" Tiempo Simulado:" +monitor.tiempo/3600+":"+monitor.tiempo%60);
             label_sistema.setText      ("total.Denun        : "+monitor.personasSistema);
             //label_atendidas.setText    ("Casos Correctos    : "+monitor.personasPagadas);
@@ -356,29 +324,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
             	pausa.setEnabled(true);
             	//run();
             	
-                /*
-                inter.start();
-                pausa.setEnabled(true);
-                simular.setText("Terminar Simulacion");
-                hilo=new Thread(new Runnable(){
-	            	int seg=0;
-	            	int min=0;
-	            	int hor=0;
-	            	public void run(){
-		                while(!listo){
-		                    try{
-		                        Thread.sleep(1000);
-		                    }catch(InterruptedException e){}
-		                    seg=contador%60;
-		                    min=(contador/60)%60;
-		                    hor=(contador/3600);
-		                    tiempo.setText(" Tiempo Simulado: "+hor+":"+min+":"+seg);
-		                    //listo=escenario.listo();
-		                    contador++;
-		                }
-	            	}
-	            });
-                hilo.start();*/
+       
            }else{
         	   System.out.println("start");
                 //inter.stop();
@@ -447,8 +393,8 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
 				System.exit(0);
 			}
 		}else if (opcion.equals("Acerca de este")) {
-			JOptionPane.showMessageDialog(this,"Para mas informacin contactarse con: \n"+"El grupo#4 -_- " +
-						" \n","Acerca de Grupo#2", JOptionPane.INFORMATION_MESSAGE);
+			JOptionPane.showMessageDialog(this,"Para mas informacin contactarse con: \n"+"El grupo -_- " +
+						" \n","", JOptionPane.INFORMATION_MESSAGE);
 	     }else if (opcion.equals("Nuevo")) {
 	        new VentanaSimulacion(gastos,investigaciones,llamadas,siniestros);
 	        
@@ -482,7 +428,7 @@ public class VentanaSimulacion extends JFrame implements ActionListener{
 			new Tablas(monitor, getMes()).setVisible(true);
 		
 		}else if(e.getSource().equals(Somos)){
-			new JSomos().setVisible(true);
+			//new JSomos().setVisible(true);
 		}
 	     
 	}

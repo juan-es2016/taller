@@ -35,6 +35,10 @@ public class Monitor
     public static int total;
     public static int rechaso;
     public static int salida;
+     public static int abreviado;
+    public static int conciliacion;
+    public static int oportunidades;
+    public static int suspencion;
     public static int m_atencionLlamada;
     public static int m_atencionSiniestros;
     public static int m_atencionEstimacionGastos;
@@ -101,6 +105,18 @@ public class Monitor
     }
           public static synchronized void incrementarRechaso(){
         rechaso ++;
+    }
+        public static synchronized void incrementarAbreviado(){
+        abreviado ++;
+    }
+        public static synchronized void incrementarConciliacion(){
+        conciliacion ++;
+    }
+        public static synchronized void incrementarOportunidades(){
+        oportunidades ++;
+    }
+        public static synchronized void incrementarSuspencion(){
+        suspencion ++;
     }
               public static synchronized void total(){
         total=Qfiscal+Dfiscal+Dpolicial+flagrante;
