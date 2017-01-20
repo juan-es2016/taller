@@ -12,6 +12,7 @@ import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -199,18 +200,13 @@ public class simulacion extends javax.swing.JFrame {
     }//GEN-LAST:event_ATRASActionPerformed
 
     private void ACERCA_DEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ACERCA_DEActionPerformed
-        fondo.setVisible(false);
-        INFORMACION.setVisible(false);
-        ACERCA_DE.setVisible(false);
-        SIMULACION.setVisible(false);
-        SALIR.setVisible(false);
-        ATRAS.setVisible(true);
-        
-        ac.setVisible(true);
-        this.add(ac, BorderLayout.CENTER);
-        this.pack();
-        this.setExtendedState(MAXIMIZED_BOTH);
-           // TODO add your handling code here:
+
+        JOptionPane.showMessageDialog(null,"\n" + "ESTA APLICACION FUE DESARROLLADA POR:"+ "\n"+
+                                                   "**JUAN MONTAÑO MAMANI"+ "\n"+
+                                                   "**JHOSMAR PARRA MONTAÑO"+ "\n"+
+                                                   "**EDWIN BUSTAMANTE RODRIGUEZ"+ "\n"+
+                                                   "**MAX CHOQUE MARTINEZ",
+                "Acerca De", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_ACERCA_DEActionPerformed
 
     private void SIMULACIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SIMULACIONActionPerformed

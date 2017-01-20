@@ -392,7 +392,9 @@ public class Cliente extends Thread implements Runnable{
 		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
 		//moverS(589);
 		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-		moverD(700);
+		moverD(600);
+                imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
+		moverS(150);
                 monitor.incrementarImputacion();
                 aux=0;
             }else{
