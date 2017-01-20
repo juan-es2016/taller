@@ -123,9 +123,7 @@ public class Panel123 extends JPanel {
 		//fondo.setIcon(new ImageIcon(escala));
                  //Dimension tamanio= getSize();
      ImageIcon imagenFondo = new ImageIcon(getClass().getResource("/images/fondosimu.png"));
-       // g.drawImage(imagenFondo.getImage(),0,0,tamanio.width,tamanio.height,null);
-     //setOpaque(false);
-      //super.paintComponent(g);
+
     	fondo=new JLabel();
     	//fondo.setLayout(null);
     	fondo.setIcon(imagenFondo);
@@ -133,13 +131,6 @@ public class Panel123 extends JPanel {
     	fondo.setVisible(true);
         add(fondo);
         
-        //nota=new JLabel();
-    	//fondo.setLayout(null);
-        //ImageIcon imagenNota = new ImageIcon(getClass().getResource("/images/nota.png"));
-    	//nota.setIcon(imagenNota);
-       //nota.setBounds(950,30,250,200);
-    	//nota.setVisible(true);
-      // fondo.add(nota);
     }
 	
     public void crearBotones(){
@@ -479,12 +470,5 @@ public class Panel123 extends JPanel {
     	
 		
 	}
-    public static void main(String[] args)
-    {
-        Monitor mo=new Monitor();
-    	Panel123 inicio =new Panel123(mo,1,2,3,4);
-    	
-	}
-        
 	
 }
