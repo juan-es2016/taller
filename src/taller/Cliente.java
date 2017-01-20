@@ -247,13 +247,13 @@ public class Cliente extends Thread implements Runnable{
 		System.out.println(va.uniforme(1, (siniestros-1)));
 		int i= va.uniforme(1, (siniestros-1)); ///////////////////PROB UNIFORME
 		switch (i){
-            case 1: {	imagen.setLocation(500,330);
+            case 1: {	imagen.setLocation(500,250);
             			dormir(tiempoVerificacionSiniestros); ////////////REVISION EN SINIESTROS
             			monitor.insertarTiempoSiniestros((double)tiempoVerificacionSiniestros);
-            			imagen.setLocation(500,330);
+            			imagen.setLocation(500,250);
             			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
             			monitor.incrementarSiniestros();
-            			moverD(550);
+            			moverD(620);
         			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
         			//moverD(580);
         	}
@@ -392,9 +392,9 @@ public class Cliente extends Thread implements Runnable{
 		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
 		//moverS(589);
 		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-		moverD(550);
+		moverD(650);
                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-		moverS(75);
+		//moverS(75);
                 monitor.incrementarImputacion();
                 aux=0;
             }else{
@@ -414,9 +414,11 @@ public class Cliente extends Thread implements Runnable{
 			    		//moverI(480);
 			    		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
 			    		//moverS(589);
-			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaN.gif")));
-			    		moverN(225);
-                                        monitor.incrementarSalidas();
+                                        
+			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+			    		moverD(700);
+                                     
+                                        monitor.incrementarImputacion();
                                         aux=0;
             }
             break;
@@ -425,10 +427,10 @@ public class Cliente extends Thread implements Runnable{
 			    		imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
 			    		moverS(480);
                                         imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-			    		moverD(700);
+			    		moverD(800);
 			    		//imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
 			    		//moverD(525);
-                                        monitor.incrementarImputacion();
+                                        monitor.incrementarSalidas();
                                         aux=0;
                                         
 			}
@@ -544,13 +546,15 @@ public class Cliente extends Thread implements Runnable{
 		        		moverD(950);
 	        }
 	        break;
-	        case 2: {	imagen.setLocation(778, 225);
+	        case 2: {	imagen.setLocation(778, 275);
                                         imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-			    		moverD(800);
-	        			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaS.gif")));
-			    		moverS(300);
-                                        imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-			    		moverD(900);
+			    		moverD(840);
+                                        imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaN.gif")));
+			    		moverN(140);
+	        			imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+			    		moverD(950);
+                                        //imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+			    		//moverD(900);
                                         
 			 }
 	        break;
@@ -558,9 +562,9 @@ public class Cliente extends Thread implements Runnable{
                                                 imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
 						moverD(800);
 						imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaN.gif")));
-						moverN(300);
-                                                imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
-						moverD(900);
+						//moverN(300);
+                                                //imagen.setIcon(new ImageIcon(getClass().getResource("/images/caminaD.gif")));
+						//moverD(900);
 	        }
 			break;
 	        case 4: {	imagen.setLocation(778, 519);
@@ -621,7 +625,8 @@ public class Cliente extends Thread implements Runnable{
             			dormir((int)tiempoTaller);    ////////////REPARANDO
             			monitor.insertarTiempoTaller(tiempoTaller);
             			imagen.setIcon(new ImageIcon(getClass().getResource("/images/feliz.jpg")));
-            			imagen.setLocation(1170, 300);
+            			//imagen.setLocation(1170, 300);
+                                imagen.setLocation(40000, 40000);
             			monitor.incrementarTaller();
             			dormir(200);
             			imagen.setVisible(false);
@@ -631,7 +636,8 @@ public class Cliente extends Thread implements Runnable{
             			dormir(500);
             			monitor.incrementarNegociacion();
             			imagen.setIcon(new ImageIcon(getClass().getResource("/images/feliz.jpg")));
-            			imagen.setLocation(100, 400);
+            			//imagen.setLocation(100, 400);
+                                imagen.setLocation(40000, 40000);
             			dormir((int)tiempoNegociacion);
             			monitor.insertarTiempoNegociacion(tiempoNegociacion);
             			imagen.setVisible(false);
