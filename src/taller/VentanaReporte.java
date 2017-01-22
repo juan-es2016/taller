@@ -5,6 +5,8 @@ import javax.swing.*;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import org.jfree.chart.ChartFrame;
@@ -39,6 +41,8 @@ class VentanaReporte extends JFrame
         private DefaultTableModel modeloTablaGraficos;
         private JScrollPane scrolGraficos;
         private JTable tablaGraficos;
+         private Cursor cursor;
+        private JButton boton;
         
         //int =(monitor.personasSistema);
 	int Qfiscal=(monitor.Qfiscal);
@@ -82,6 +86,13 @@ class VentanaReporte extends JFrame
                 panelGraficos.setBounds(0, 0, 1024, 480);
                 panelGraficos.setLayout(null);
                  panelGraficos.setVisible(false);
+                 boton = new JButton("volver"); 
+    	boton.setBounds(400,450, 90, 30);
+    	boton.setCursor(cursor);
+    	//panelGraficos.add(boton);
+        add(boton);
+        eventoSalir sal = new eventoSalir();
+    	boton.addActionListener(sal);
 
              add(panelGraficos);
 
@@ -206,4 +217,9 @@ class VentanaReporte extends JFrame
 
              
 	}
+        class eventoSalir implements ActionListener{
+    	public void actionPerformed(ActionEvent e){
+    		setVisible(false);	
+    	 }
+        }
 }
